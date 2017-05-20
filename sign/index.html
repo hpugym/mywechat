@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <script type="text/javascript" src="../jquery-1.8.3-min.js"></script>
+        <title>动画测试</title>
+        <style type="text/css">
+            #container{
+                width: 64px;
+                height: 64px;
+                border: 1px solid transparent;
+                margin: auto;
+                position: relative;
+            }
+            #container img{
+                border:1px solid transparent;
+                width: inherit;
+            }
+            #container p{
+                font-family: "微软雅黑";
+            }
+            body{
+                background-image:url("./bg.jpg");
+                background-repeat:no-repeat;
+                background-size: 100% 120%;
+                background-attachment:fixed
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <img src="apploading.gif">
+            <p>加载中...</p>
+        </div>
+        <script type="text/javascript">
+            function getStyle(obj,attr){//用来获取任意的属性值，其中obj元素名，attr是属性名
+                if(obj.currentStyle){
+                    return obj.currentStyle[attr];//只适用于IE
+                }else{
+                    return getComputedStyle(obj,false)[attr];//只适用于FF,Chrome,Safa
+                }
+            }
+            window.onload = function () {
+               var obj = document.getElementById('container');
+               var h = document.body.offsetHeight;
+               var w = document.body.offsetWidth;
+               var myh = document.body.offsetHeight/2 - 64;
+               var myw = document.body.offsetWidth/2  - 96;
+               obj.style['top'] = myh+"px";
+
+
+
+                console.log(parseFloat(getStyle(obj , "top")));
+                console.log(myh);
+                console.log(document.body.offsetWidth);
+                console.log(myw);
+                console.log(document.body.offsetHeight);
+            }
+
+        </script>
+    </body>
+</html>
