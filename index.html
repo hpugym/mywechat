@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="">
+    <script type="text/javascript">
+        // 高度适配说明：通过设置一个方便计算的数值，来设置根元素的font-size,所有元素通过rem为单位达到适配需求；
+        //具体使用：
+        //通过视觉稿宽度除以一个数获得一个方便计算的值100；
+        //所有元素的高度可用{(视觉稿量的的高度)/100}rem获得适配的高度；
+        !function(){function a(){document.documentElement.style.fontSize=document.documentElement.clientWidth/6.4+"px"}var b=null;window.addEventListener("resize",function(){clearTimeout(b),b=setTimeout(a,300)},!1),a()}(window);
+    </script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+        }
+        html{
+            width: 100%;
+            height: 100%;
+            opacity: 0.84;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background: #373737;
+        }
+        /*table:此元素会作为块级表格来显示（类似 <table>），表格前后带有换行符。*/
+        .table{
+            width: 100%;
+            height: 50px;
+            display: table;
+            line-height: 50px;
+        }
+        /*table-cell:元素会作为一个表格单元格显示（类似 <td> 和 <th>）*/
+        #title{
+            font-size: 0.37rem;
+            color: #fff;
+            text-align:center;
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+        }
+        #center{
+            width: 100%;
+            text-align:center;
+            background-color:#d5e4eb;
+        }
+        #headImg{
+            display: inline-block;
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 50%;
+            margin-top: 3%;
+        }
+        #name{
+            font-size: 0.3rem;
+            color:darkslategrey;
+            margin-top: -10px;
+            color: #014d64;
+            margin-bottom: .5rem;
+        }
+        .centerChild{
+            position: relative;
+            width: 78%;
+            margin-left: 10%;
+            padding: 1%;
+            margin-bottom: .3rem;
+            background-color: #fff;
+
+        }
+        .courseNumberImg{
+            width: .75rem;
+            display: block;
+            margin-bottom: .2rem;
+        }
+        .courseNumber{
+            position: absolute;
+            top: .05rem;
+            left: .95rem;
+            font-size: .3rem;
+            line-height: .8rem;
+            color: #014d64;
+            text-align: left;
+        }
+        .Attendance{
+            position: absolute;
+            color: #000;
+            font-size: .3rem;
+            line-height: .5rem;
+            background-color: #d5e4eb;
+            top: .15rem;
+            right: 2%;
+            width: 1.3rem;
+            font-weight: 700;
+        }
+        .courseDetail{
+            color: #014d64;
+            font-size:.27rem;
+            padding-left: .8rem;
+            margin-top: .1rem;
+        }
+        .courseDetail p{
+            height: .6rem;
+            line-height: .6rem;
+            text-align: left;
+        }
+        .courseDetail img{
+            width: .35rem;
+            height: auto;
+            position: relative;
+            top: .07rem;
+        }
+        .courseDetail p span{
+            display: inline-block;
+            margin-left: .4rem;
+        }
+
+        .teacherImg{
+            display: block;
+            width: .8rem;
+            height: auto;
+            padding-left: .1rem;
+            padding-bottom: .1rem;
+            margin-top: .1rem;
+        }
+        .attendanceP{
+            position: absolute;
+            font-size: .3rem;
+            color: #014d64;
+            right: 2%;
+            bottom: .3rem;
+            font-weight: 700;
+        }
+        .endImg{
+            width:.55rem;
+        }
+        #brace{
+            width: 100%;
+            height:50px;
+        }
+        ul{
+            list-style: none;
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            bottom: 0;
+            background-color:#373737;
+        }
+        ul li{
+            display: table;
+            width: 33.1%;
+            height: 50px;
+            float: left;
+            /*display: inline-block;*/
+        }
+        /*子元素：{vertical-align:middle} 此属性设置子元素相对于父元素的垂直对齐方式。*/
+        ul li a{
+            display: table-cell;
+            width: 100%;
+            height: 50px;
+            vertical-align:middle;
+        }
+        ul li img{
+            display: block;
+            width: .7rem;
+            height: auto;
+            margin-left: .72rem;
+        }
+
+        
+    </style>
+</head>
+<body>
+<!-- 头部 -->
+<div class="table">
+    <p id="title">我的课程列表</p>
+</div>
+<!-- 中间 -->
+<div id="center">
+    <img src="images/boy.jpg" alt="" id="headImg">
+    <p id="name">郭月盟</p>
+    <div class="centerChild">
+        <img src="images/courseNumberImg.png" alt="" class="courseNumberImg">
+        <p class="courseNumber">09130781235</p>
+        <p class="Attendance" style="color:red;">优&nbsp;秀</p>
+        <div class="courseDetail">
+            <p><img src="images/courseName.png" alt=""><span class="courseName">数据库原理与应用</span></p>
+            <p><img src="images/courseTeacher.png" alt=""><span class="courseTeacher">吴燕</span></p>
+            <p><img src="images/allTime.png" alt=""><span class="allTime">1-19周</span></p>
+            <p><img src="images/credit.png" alt=""><span class="signDetailTime">4学分</span></p>
+            <p><img src="images/phone.png" alt=""><span class="phone">18336800665</span></p>
+        </div>
+        <img src="images/teacherImg.png" alt="" class="teacherImg">
+        <p class="attendanceP">我的当前出勤率为: <span>90%</span></p>
+    </div>
+    <div class="centerChild">
+        <img src="images/courseNumberImg.png" alt="" class="courseNumberImg">
+        <p class="courseNumber">09130781235</p>
+        <p class="Attendance" style="color:red;">良&nbsp;好</p>
+        <div class="courseDetail">
+            <p><img src="images/courseName.png" alt=""><span class="courseName">数据库原理与应用</span></p>
+            <p><img src="images/courseTeacher.png" alt=""><span class="courseTeacher">吴燕</span></p>
+            <p><img src="images/allTime.png" alt=""><span class="allTime">1-19周</span></p>
+            <p><img src="images/credit.png" alt=""><span class="signDetailTime">4学分</span></p>
+            <p><img src="images/phone.png" alt=""><span class="phone">18336800665</span></p>
+        </div>
+        <img src="images/teacherImg.png" alt="" class="teacherImg">
+        <p class="attendanceP">我的当前出勤率为: <span>90%</span></p>
+    </div>
+    <div class="centerChild">
+        <img src="images/courseNumberImg.png" alt="" class="courseNumberImg">
+        <p class="courseNumber">09130781235</p>
+        <p class="Attendance">合&nbsp;格</p>
+        <div class="courseDetail">
+            <p><img src="images/courseName.png" alt=""><span class="courseName">数据库原理与应用</span></p>
+            <p><img src="images/courseTeacher.png" alt=""><span class="courseTeacher">吴燕</span></p>
+            <p><img src="images/allTime.png" alt=""><span class="allTime">1-19周</span></p>
+            <p><img src="images/credit.png" alt=""><span class="signDetailTime">4学分</span></p>
+            <p><img src="images/phone.png" alt=""><span class="phone">18336800665</span></p>
+        </div>
+        <img src="images/teacherImg.png" alt="" class="teacherImg">
+        <p class="attendanceP">我的当前出勤率为: <span>90%</span></p>
+    </div>
+    <div class="centerChild">
+        <img src="images/courseNumberImg.png" alt="" class="courseNumberImg">
+        <p class="courseNumber">09130781235</p>
+        <p class="Attendance">不&nbsp;合&nbsp;格</p>
+        <div class="courseDetail">
+            <p><img src="images/courseName.png" alt=""><span class="courseName">数据库原理与应用</span></p>
+            <p><img src="images/courseTeacher.png" alt=""><span class="courseTeacher">吴燕</span></p>
+            <p><img src="images/allTime.png" alt=""><span class="allTime">1-19周</span></p>
+            <p><img src="images/credit.png" alt=""><span class="signDetailTime">4学分</span></p>
+            <p><img src="images/phone.png" alt=""><span class="phone">18336800665</span></p>
+        </div>
+        <img src="images/teacherImg.png" alt="" class="teacherImg">
+        <p class="attendanceP">我的当前出勤率为: <span>90%</span></p>
+    </div>
+    <!-- 在center底部增加一个div ，起撑起底部作用 -->
+    <div id="brace"></div>
+
+</div>
+<!-- 尾部 -->
+<ul>
+    <li><a href=""><img src="images/1.png" alt=""></a></li>
+    <li><a href=""><img src="images/22.png" alt=""></a></li>
+    <li><a href=""><img src="images/3.png" alt=""></a></li>
+</ul>
+</body>
+</html>
+
